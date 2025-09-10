@@ -350,5 +350,4 @@ $RECYCLE.BIN/
 
 /shelf/
 /workspace.xml
-/.github/workflows/ci.yml
-/.github/workflows/ci-docker.yml
+
