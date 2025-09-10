@@ -25,7 +25,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Pytest (coverage)
-        run: docker run --rm -v "$PWD:/app" app-dev:ci pytest -q --cov=app --cov-report=xml --cov-fail-under=90
+        run: docker run --rm -v "$PWD:/app" -e PYTHONPATH=/app app-dev:ci pytest -q --cov=app --cov-report=xml --cov-fail-under=90
 
       - name: Upload coverage.xml
         if: always()
